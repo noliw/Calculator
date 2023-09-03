@@ -114,10 +114,11 @@ class MainActivity : AppCompatActivity() {
 
             if (expression.checkSyntax()) {
                 val value = expression.calculate()
+                val formattedValue = String.format("%.2f", value)
                 if (str.contains("mod")) {
-                    result.text = "= $value"
+                    result.text = "= $formattedValue remainder"
                 } else {
-                    result.text = "= $value"
+                    result.text = "= $formattedValue"
                 }
             } else {
                 result.text = "Invalid Expression"
