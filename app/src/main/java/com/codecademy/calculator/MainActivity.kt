@@ -8,7 +8,6 @@ import android.widget.TextView
 import org.mariuszgromada.math.mxparser.Expression
 
 
-
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -105,6 +104,8 @@ class MainActivity : AppCompatActivity() {
 
         equals.setOnClickListener {
             var str = input.text.toString()
+
+            // Replace "%" with "mod()" for compatibility with mXparser
             if (str.contains("%")) {
                 str = replacePercentageWithMod(str)
             }
@@ -114,6 +115,8 @@ class MainActivity : AppCompatActivity() {
             if (expression.checkSyntax()) {
                 val value = expression.calculate()
                 if (str.contains("mod")) {
+                    result.text = "= $value"
+                } else {
                     result.text = "= $value"
                 }
             } else {
@@ -126,6 +129,7 @@ class MainActivity : AppCompatActivity() {
 
 }
 
+
 fun replacePercentageWithMod(expression: String): String {
     val regex = "(\\d+)%([\\d]+)".toRegex()
     return regex.replace(expression) { matchResult ->
@@ -133,9 +137,6 @@ fun replacePercentageWithMod(expression: String): String {
         "mod($leftOperand, $rightOperand)"
     }
 }
-
-
-
 
 
 
