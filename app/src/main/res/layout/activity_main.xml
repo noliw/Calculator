@@ -7,9 +7,13 @@
     android:layout_gravity="center"
     tools:context=".MainActivity">
 
+
+
+
     <LinearLayout
+        android:windowSoftInputMode="stateAlwaysHidden"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginBottom="5dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/view"
@@ -21,30 +25,34 @@
             android:id="@+id/input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:cursorVisible="false"
             android:ems="10"
             android:gravity="end"
-            android:hint="result"
-            android:cursorVisible="false"
-            android:background="@color/white"
-            android:inputType="textPersonName"
+            android:layout_marginTop="10dp"
+            android:background="@null"
             android:scrollHorizontally="true"
-            android:textColor="@color/black"
-            android:textSize="60sp"
-            android:textStyle="bold" />
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="80sp"
+            android:inputType="none"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+             />
 
         <EditText
             android:id="@+id/result_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:gravity="end"
-            android:hint="input"
             android:cursorVisible="false"
-            android:background="@color/white"
+            android:ems="20"
+            android:gravity="end"
+            android:background="@null"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
             android:inputType="textPersonName"
             android:scrollHorizontally="true"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
+            android:textColor="@color/btn_txt"
+            android:textSize="60sp" />
     </LinearLayout>
 
     <View
