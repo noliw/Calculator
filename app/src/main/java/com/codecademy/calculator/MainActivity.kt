@@ -114,15 +114,28 @@ class MainActivity : AppCompatActivity() {
 
             if (expression.checkSyntax()) {
                 val value = expression.calculate()
-                val formattedValue = String.format("%.2f", value)
-                if (str.contains("mod")) {
-                    result.text = "= $formattedValue remainder"
+
+                // Check if the number is an integer
+                val isInteger = value == Math.floor(value)
+
+                val formattedValue = if (isInteger) {
+                    // If it's an integer, convert to integer and then to string
+                    value.toInt().toString()
                 } else {
-                    result.text = "= $formattedValue"
+                    // Otherwise, format to keep two decimal places
+                    String.format("%.2f", value)
+                }
+
+                if (str.contains("mod")) {
+                    result.text = formattedValue
+                } else {
+                    result.text = formattedValue
                 }
             } else {
                 result.text = "Invalid Expression"
+
             }
+
         }
 
     }
