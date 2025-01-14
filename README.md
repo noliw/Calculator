@@ -5,6 +5,13 @@ The Calculator App is a straightforward and efficient Android application design
 ## Demo Video
 [![Calculator App Demo](https://imgur.com/a/iWkZGqc)](https://imgur.com/a/iWkZGqc)
 
+## Demo Video
+
+<video src="https://yourdomain.github.io/path-to-video.mp4" controls>
+Your browser does not support the video tag.
+</video>
+
+
 
 ## Features
 - **Scientific Calculator (Future Addition)**: Plan to include advanced functions such as trigonometry, logarithms, and power calculations in upcoming versions.
