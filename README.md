@@ -2,6 +2,10 @@
 
 The Calculator App is a straightforward and efficient Android application designed to perform basic arithmetic operations and calculations with a clean, user-friendly interface. Built using **Kotlin** and **XML**, this app provides essential calculator functionality for everyday use.
 
+## Demo Video
+[![Calculator App Demo](https://imgur.com/a/iWkZGqc)](https://imgur.com/a/iWkZGqc)
+
+
 ## Features
 - **Scientific Calculator (Future Addition)**: Plan to include advanced functions such as trigonometry, logarithms, and power calculations in upcoming versions.
 - **Basic Arithmetic Operations**: Perform addition, subtraction, multiplication, and division effortlessly.
